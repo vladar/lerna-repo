@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0-alpha.3](https://github.com/vladar/lerna-repo/compare/my-test-package2@1.4.0-alpha.2...my-test-package2@1.4.0-alpha.3) (2020-10-22)
+
+**Note:** Version bump only for package my-test-package2
+
+
+
+
+
 # [1.4.0-alpha.2](https://github.com/vladar/lerna-repo/compare/my-test-package2@1.4.0-alpha.1...my-test-package2@1.4.0-alpha.2) (2020-10-22)
 
 
