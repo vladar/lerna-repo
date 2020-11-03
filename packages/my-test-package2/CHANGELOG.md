@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0-next.0](https://github.com/vladar/lerna-repo/compare/my-test-package2@1.5.0...my-test-package2@1.6.0-next.0) (2020-11-03)
+
+
+* feat(my-test-package2)!: tmp ([e0dad10](https://github.com/vladar/lerna-repo/commit/e0dad107eba83e4a6ad400715736ebfdde9953d5))
+
+
+### BREAKING CHANGES
+
+* broke this thing.
+
+
+
+
+
 # [1.5.0](https://github.com/vladar/lerna-repo/compare/my-test-package2@1.5.0-next.0...my-test-package2@1.5.0) (2020-10-23)
 
 
