@@ -1,6 +1,6 @@
 {
   "name": "my-test-package3",
-  "version": "1.3.0-rc.0",
+  "version": "2.0.0-next.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "my-test-package2": "^1.3.0-rc.0"
+    "my-test-package2": "^2.0.0-next.0"
   }
 }
