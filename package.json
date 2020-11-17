@@ -8,10 +8,13 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
+    "prepublishOnly": "node scripts/check-publish-access",
+    "prepack": "node scripts/clear-package-dir --verbose",
     "publish": "yarn publish-next",
+    "publish-canary": "lerna publish --canary --yes",
     "publish-preminor": "lerna publish preminor --pre-dist-tag=next --preid=next --force-publish --allow-branch=master --message=\"chore(release): Publish next pre-minor\"",
     "publish-next": "lerna publish prerelease --pre-dist-tag=next --preid=next --allow-branch=master --no-changelog --message=\"chore(release): Publish next\"",
-    "publish-rc": "lerna publish prerelease --pre-dist-tag=rc --preid=rc --no-changelog --message=\"chore(release): Publish release candidate\"",
+    "publish-rc": "lerna publish prerelease --pre-dist-tag=rc --preid=rc --no-changelog --message=\"chore(release): Publish rc\"",
     "publish-release": "lerna publish"
   }
 }
