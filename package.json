@@ -10,7 +10,7 @@
   "scripts": {
     "publish": "yarn publish-next",
     "publish-preminor": "lerna publish preminor --pre-dist-tag=next --preid=next --force-publish --allow-branch=master --message=\"chore(release): Publish next pre-minor\"",
-    "publish-next": "lerna publish prerelease --pre-dist-tag=next --preid=next --allow-branch=master --no-changelog --message=\"chore(release): Publish next\"",
+    "publish-next": "lerna publish prerelease --pre-dist-tag=next --preid=next --allow-branch={master,release/*} --no-changelog --message=\"chore(release): Publish next\"",
     "publish-release": "lerna publish --force-publish",
     "publish-patch": "lerna publish patch"
   }
