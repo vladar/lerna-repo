@@ -6,4 +6,4 @@ const changelogPath = path.join(process.cwd(), `packages`, `my-test-package2`, `
 const content = fs.readFileSync(changelogPath)
 fs.writeFileSync(changelogPath, `lalala` + String(content))
 
-childProcess.execSync("git", ["add", "--", changelogPath]);
+childProcess.execSync("git", ["add", changelogPath]);
