@@ -1,3 +1,5 @@
+my-test-package2: 2.1.0-next.8
+
 lalalalalala# Change Log
 
 All notable changes to this project will be documented in this file.

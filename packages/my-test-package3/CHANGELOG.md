@@ -1,3 +1,5 @@
+my-test-package3: 2.1.0-next.9
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
