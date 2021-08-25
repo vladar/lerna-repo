@@ -1,6 +1,5 @@
 const path = require(`path`)
 const fs = require(`fs`)
-const childProcess = require(`child_process`)
 const execa = require(`execa`)
 
 function toPackageName(path) {
@@ -10,31 +9,27 @@ function toPackageName(path) {
     : undefined
 }
 
+function resolvePackageVersion(packageName) {
+  const changelogPath = path.join(`packages`, packageName, `package.json`)
+  return JSON.parse(fs.readFileSync(changelogPath)).version
+}
+
 async function run() {
   const { stdout } = await execa("git", ["ls-files", "-m"])
   // 88cc97089cbabb0edce0383fe6132ef79aaeaa69
 
-  const changedPackages = String(stdout)
+  const packages = String(stdout)
     .split(`\n`)
     .map(toPackageName)
     .filter(Boolean)
+    .map(pkg => [pkg, resolvePackageVersion(pkg)])
 
-  if (!changedPackages.length) {
-
-  }
-
-  console.log(`Changed packages: `, changedPackages)
-
-  for (const packageName of changedPackages) {
+  for (const [packageName, version] of packages) {
     const changelogPath = path.join(process.cwd(), `packages`, packageName, `CHANGELOG.md`)
     const content = fs.readFileSync(changelogPath)
-    fs.writeFileSync(changelogPath, `lalala` + String(content))
+    fs.writeFileSync(changelogPath, `${packageName}: ${version}\n\n` + String(content))
+    await execa("git", ["add", changelogPath]);
   }
-
-
-
-
-  await execa("git", ["add", changelogPath]);
 }
 
 run().catch(console.error)
